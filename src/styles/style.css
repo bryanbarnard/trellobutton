@@ -1,0 +1,20 @@
+.mytext_token{
+    width: 500px;
+}
+.mytext_key{
+    width: 250px;
+}
+p { margin:0 }
+
+dialog::backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#myTrelloButton {
+    margin-left:10px;
+}

@@ -1,0 +1,68 @@
+{
+    "name": "Trello Button",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Shows an popup allowing you to create card from url",
+    "background": {
+        "scripts": [
+            "scripts/func.js",
+            "scripts/underscore.min.js",
+            "scripts/background.js"
+         ]
+    },
+    "page_action":
+    {
+        "default_icon": "images/trello_favico_19.png",
+        "default_title": "Trello Button"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "*://*.service-now.com/*",
+        "*://*.runscope.net/*",
+        "*://*.github.com/*",
+        "background",
+        "https://*.trello.com/*"
+    ],
+    "content_security_policy": "script-src 'self' https://api.trello.com; object-src 'self'",
+    "web_accessible_resources": [
+        "images/*.png",
+        "options.html"
+    ],
+    "icons": {
+        "16": "images/trello_favico_16.png",
+        "48": "images/trello_favico_48.png",
+        "128": "images/trello_favico_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.service-now.com/*",
+                "*://*.github.com/*"
+
+            ],
+            "css": ["styles/style.css", "styles/dialog-polyfill.css"],
+            "js":  ["scripts/common.js", "scripts/dialog-polyfill.js"]
+        },
+        {
+            "matches": [
+                "*://*.service-now.com/release_task*",
+                "*://*.service-now.com/rm_task*",
+                "*://*.service-now.com/ticket*",
+                "*://*.service-now.com/incident*"
+
+            ],
+            "css": ["styles/style.css", "styles/dialog-polyfill.css"],
+            "js":  ["scripts/content/service-now.js", "scripts/dialog-polyfill.js"],
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "*://*.github.com/*"
+            ],
+            "css": ["styles/style.css", "styles/dialog-polyfill.css"],
+            "js":  ["scripts/content/github.js", "scripts/dialog-polyfill.js"]
+        }
+    ],
+    "options_page": "options.html"
+}
