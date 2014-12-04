@@ -1,0 +1,15 @@
+{
+  "name": "trellobutton",
+  "version": "0.0.1",
+  "description": "Card Button for Trello. Allows easy creation of Trello Cards directly from other web applications.",
+  "private": false,
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-compress": "^0.11.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-jslint": "^1.1.12"
+  }
+}
