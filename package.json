@@ -1,8 +1,12 @@
 {
   "name": "trellobutton",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/npm/npm.git"
+  },
   "version": "0.0.1",
+  "private": true,
   "description": "Card Button for Trello. Allows easy creation of Trello Cards directly from other web applications.",
-  "private": false,
   "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.5",

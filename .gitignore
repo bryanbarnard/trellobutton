@@ -8,3 +8,4 @@
 *.iws
 
 ## Plugin-specific files:
+node_modules
