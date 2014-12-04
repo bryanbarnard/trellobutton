@@ -1,5 +1,4 @@
-flaming-spice
+Card Button for Trello
 =============
 
-Chrome Test Extension for Trello Card Creation  
-Test Add
+Chrome Test Extension for Trello Card Creation
