@@ -1,6 +1,6 @@
 ##Card Button for Trello
 
-Chrome Extension for Trello Card Creation
+Chrome Extension for Trello card creation from your favorite web apps.
 
 ##Stay Tuned
 
